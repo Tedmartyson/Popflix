@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% load static %}
+
+
+<form method="post" enctype="multipart/form-data" id="parser-form">
+    {% csrf_token %}
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <input type="file" class="custom-file-input" name="file" id="inputGroupFile03"/>
+        </div>
+        <div class="custom-file">
+            <button type="submit" class="btn btn-primary" name="submit" id="submit">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="btn-spinner"></span>
+                <span class="sr-only" id="btn-text">Загрузить в базу</span>
+            </button>
+        </div>
+    </div>
+</form>
+
+<script>
+
+$("#btn-spinner").hide();
+
+$("#submit").click(function(){
+    $("#btn-spinner").show();
+});
+
+</script>
+
+{% endblock %}

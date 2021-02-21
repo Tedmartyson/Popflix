@@ -1,0 +1,34 @@
+LOG:  database system was shut down at 2021-02-17 14:24:38 +03
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  WAL writer process (PID 29916) was terminated by signal 9: Killed: 9
+LOG:  terminating any other active server processes
+WARNING:  terminating connection because of crash of another server process
+DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+LOG:  all server processes terminated; reinitializing
+LOG:  database system was interrupted; last known up at 2021-02-17 14:25:55 +03
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  invalid record length at 0/150D6D0: wanted 24, got 0
+LOG:  redo is not required
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  database system was interrupted; last known up at 2021-02-17 14:28:35 +03
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  invalid record length at 0/150D740: wanted 24, got 0
+LOG:  redo is not required
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "Popflixdb" does not exist
+FATAL:  database "gpuser" does not exist
+FATAL:  database "gpuser" does not exist
+FATAL:  role "Popflixdb" does not exist
+FATAL:  role "postgres" does not exist
+FATAL:  database "gpuser" does not exist
+FATAL:  database "Popflixdb" does not exist
+ERROR:  duplicate key value violates unique constraint "catalog_auction_pkey"
+DETAIL:  Key (id)=(5) already exists.
+STATEMENT:  INSERT INTO "catalog_auction" ("rate", "user_id", "house_id") VALUES (9999999912.0, 2, 1656) RETURNING "catalog_auction"."id"

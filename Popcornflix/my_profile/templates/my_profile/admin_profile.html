@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% load static %}
+
+<h1>Мой кабинет</h1>
+
+<a class="btn btn-outline-primary" href="{% url 'excel_parser' %}">Загрузить в базу</a>
+
+{% endblock %}
